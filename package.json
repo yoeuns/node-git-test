@@ -2,12 +2,13 @@
   "name": "node-git-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "NODE_ENV=production webpack && NODE_ENV=production  nodemon ./bin/www",
+    "build": "NODE_ENV=production webpack",
+    "dev": "NODE_ENV=development nodemon ./bin/www",
+    "devserver": "webpack-dev-server --open --progress"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,22 @@
   },
   "homepage": "https://github.com/yoeuns/node-git-test",
   "dependencies": {
+    "babel-loader": "^9.1.2",
+    "core-js": "^3.27.2",
+    "css-loader": "^6.7.3",
+    "ejs": "^3.1.8",
     "express": "^4.18.2",
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "nodemon": "^2.0.20",
+    "npm": "^9.4.2",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-middleware": "^6.0.1"
   }
 }
