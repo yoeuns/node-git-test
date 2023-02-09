@@ -1,0 +1,26 @@
+{
+  "name": "node-git-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoeuns/node-git-test.git"
+  },
+  "author": "yoeun seok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoeuns/node-git-test/issues"
+  },
+  "homepage": "https://github.com/yoeuns/node-git-test",
+  "dependencies": {
+    "express": "^4.18.2",
+    "gh-pages": "^5.0.0"
+  }
+}
